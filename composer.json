@@ -1,0 +1,24 @@
+{
+    "name": "eru123/filepark",
+    "description": "A file-hosting micro service",
+    "type": "project",
+    "require": {
+        "eru123/venv": "^1.0",
+        "eru123/orm": "^2.0",
+        "eru123/router": "^1.0"
+    },
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "Filepark\\": "src/",
+            "eru123\\": "eru123/"
+        }
+    },
+    "authors": [
+        {
+            "name": "eru123",
+            "email": "jericho@skiddph.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

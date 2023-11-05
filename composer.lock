@@ -1,0 +1,133 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4c79c9b73980a852917e8ece2c403e6f",
+    "packages": [
+        {
+            "name": "eru123/orm",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eru123/php-orm.git",
+                "reference": "9f5a4eeec2220b79bd423ff289780b8b71c7849f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eru123/php-orm/zipball/9f5a4eeec2220b79bd423ff289780b8b71c7849f",
+                "reference": "9f5a4eeec2220b79bd423ff289780b8b71c7849f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eru123\\orm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "eru123",
+                    "email": "jericho@skiddph.com"
+                }
+            ],
+            "description": "PHP Based ORM",
+            "support": {
+                "issues": "https://github.com/eru123/php-orm/issues",
+                "source": "https://github.com/eru123/php-orm/tree/v2.0.0"
+            },
+            "time": "2023-11-03T06:34:17+00:00"
+        },
+        {
+            "name": "eru123/router",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eru123/php-router.git",
+                "reference": "d8f717bef75510930f9c3e7ad72dcb68cbe9f0ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eru123/php-router/zipball/d8f717bef75510930f9c3e7ad72dcb68cbe9f0ad",
+                "reference": "d8f717bef75510930f9c3e7ad72dcb68cbe9f0ad",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eru123\\router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "eru123",
+                    "email": "39824083+eru123@users.noreply.github.com"
+                }
+            ],
+            "description": "A PHP Library for handling Routes using a Parent-Child Model",
+            "support": {
+                "issues": "https://github.com/eru123/php-router/issues",
+                "source": "https://github.com/eru123/php-router/tree/v1.0.0"
+            },
+            "time": "2023-11-03T06:58:06+00:00"
+        },
+        {
+            "name": "eru123/venv",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eru123/php-venv.git",
+                "reference": "aa91ef00eb97195a91aebfef05ca0c57977bca77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eru123/php-venv/zipball/aa91ef00eb97195a91aebfef05ca0c57977bca77",
+                "reference": "aa91ef00eb97195a91aebfef05ca0c57977bca77",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/venv.php"
+                ],
+                "psr-4": {
+                    "eru123\\venv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jericho Aquino",
+                    "email": "yeoligoakino@gmail.com"
+                }
+            ],
+            "description": "Load env files virtually",
+            "support": {
+                "issues": "https://github.com/eru123/php-venv/issues",
+                "source": "https://github.com/eru123/php-venv/tree/v1.0.5"
+            },
+            "time": "2023-11-04T12:43:30+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
