@@ -1,0 +1,43 @@
+#!/bin/sh
+
+if [ -n "$TZ" ]; then
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+fi
+
+if [ -z "$PWD" ]; then
+    PWD=/var/www/html
+fi
+
+if [ -n "$HOST_ID" ]; then
+    usermod -u $HOST_ID www-data
+fi
+
+if [ -n "$HOST_GID" ]; then
+    groupmod -g $HOST_GID www-data
+fi
+
+if [ "$APP_ENV" = "development" ]; then
+    mv /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
+else
+    mv /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+fi
+
+cd $PWD
+
+if [ -n "$COMPOSER_DIR" ]; then
+    cd $COMPOSER_DIR && composer install --no-interaction --no-progress --no-suggest --optimize-autoloader
+elif [ -f "composer.json" ]; then
+    composer install --no-interaction --no-progress --no-suggest --optimize-autoloader
+fi
+
+if [ -n "$COMPOSER_DIRS" ]; then
+    for COMPOSER_DIR in $COMPOSER_DIRS; do
+        cd $PWD && cd $COMPOSER_DIR && composer install --no-interaction --no-progress --no-suggest --optimize-autoloader
+    done
+fi
+
+if [ ! -f "$PWD/.env" ]; then
+    cd $PWD && printenv > .env
+fi
+
+apache2-foreground
