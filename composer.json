@@ -5,7 +5,8 @@
     "require": {
         "eru123/venv": "^1.0",
         "eru123/orm": "^2.0",
-        "eru123/router": "^1.0"
+        "eru123/router": "^1.0",
+        "aws/aws-sdk-php": "^3.284"
     },
     "license": "Apache-2.0",
     "autoload": {
