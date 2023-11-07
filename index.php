@@ -2,4 +2,7 @@
 
 require_once __DIR__ . '/autoload.php';
 
-echo 'Working!';
+use Filepark\Services\Domain;
+
+Domain::load_routes();
+Domain::run();
