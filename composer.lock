@@ -82,16 +82,16 @@
         },
         {
             "name": "eru123/venv",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eru123/php-venv.git",
-                "reference": "aa91ef00eb97195a91aebfef05ca0c57977bca77"
+                "reference": "d202005a790f8b8cf4e1225415a52514ada9a1f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eru123/php-venv/zipball/aa91ef00eb97195a91aebfef05ca0c57977bca77",
-                "reference": "aa91ef00eb97195a91aebfef05ca0c57977bca77",
+                "url": "https://api.github.com/repos/eru123/php-venv/zipball/d202005a790f8b8cf4e1225415a52514ada9a1f2",
+                "reference": "d202005a790f8b8cf4e1225415a52514ada9a1f2",
                 "shasum": ""
             },
             "type": "library",
@@ -116,9 +116,9 @@
             "description": "Load env files virtually",
             "support": {
                 "issues": "https://github.com/eru123/php-venv/issues",
-                "source": "https://github.com/eru123/php-venv/tree/v1.0.5"
+                "source": "https://github.com/eru123/php-venv/tree/v1.0.6"
             },
-            "time": "2023-11-04T12:43:30+00:00"
+            "time": "2023-11-07T06:44:15+00:00"
         }
     ],
     "packages-dev": [],
@@ -129,5 +129,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.6.0"
 }
