@@ -6,6 +6,49 @@
     <title>Test</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <h1>Upload Test</h1>
+    <form>
+        <input type="file" name="files" accept="image/*">
+        <input type="submit" value="Upload">
+    </form>
+    <div>
+        <h3>Results</h3>
+        <pre></pre>
+    </div>
 </body>
+<script>
+    const form = document.querySelector('form');
+    var result_count = 0;
+    var api_base = 'https://api.filepark.skiddph.com/api/upload';
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const files = document.querySelector('[type=file]').files;
+        console.log(files);
+        const formData = new FormData();
+        for (let i = 0; i < files.length; i++) {
+            let file = files[i];
+            formData.append('files', file);
+        }
+        formData.append('token', 'test');
+        fetch(api_base + '', {
+            mode: 'cors',
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+            },
+            body: formData
+        }).then(response => {
+            return response.json();
+        }).then(data => {
+            console.log(data);
+            result_count++;
+            document.querySelector('pre').textContent += `${result_count}. ${JSON.stringify(data)}\n`;
+            document.querySelector('[type=file]').value = '';
+        }).catch(error => {
+            result_count++;
+            document.querySelector('pre').textContent += `${result_count}. ${error}\n`;
+            document.querySelector('[type=file]').value = '';
+        });
+    });
+</script>
 </html>
