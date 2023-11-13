@@ -85,13 +85,14 @@ class Domain
      */
     public static function load_routes()
     {
-        $map_file = __ROOT_DIR__ . '/routes_map.php';
+        $map_file = __CACHE_DIR__ . '/routes_map.php';
+        $map_dir = dirname($map_file);
         if (!venv('CACHE_ROUTES', true) && venv('APP_ENV', 'production') == 'production' && file_exists($map_file)) {
             self::$usedCachedRoutes = true;
             $routes = require($map_file);
         } else {
             $routes = self::routes_dirmap();
-            if (is_writable(__ROOT_DIR__)) {
+            if (is_writable($map_dir)) {
                 file_put_contents($map_file, '<?php return ' . var_export($routes, true) . ';');
             }
         }
