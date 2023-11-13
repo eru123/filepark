@@ -40,4 +40,6 @@ if [ ! -f "$PWD/.env" ]; then
     cd $PWD && printenv > .env
 fi
 
+php "$PWD/setup.php"
+
 apache2-foreground
