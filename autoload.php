@@ -11,6 +11,8 @@ define('__STORAGE_DIR__', __WRITABLE_DIR__ . '/storage');
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+use eru123\orm\ORM;
+
 venv_protect();
 venv_load(__DIR__ . '/.env', false);
 
@@ -48,3 +50,11 @@ if (
         }
     }
 }
+
+ORM::set_pdo([
+    'driver' => 'mysql',
+    'host' => venv('DB_HOST'),
+    'user' => venv('DB_USER'),
+    'pass' => venv('DB_PASS'),
+    'dbname' => venv('DB_NAME'),
+]);
